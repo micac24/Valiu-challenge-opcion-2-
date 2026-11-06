@@ -1358,7 +1358,7 @@
   html body [data-card="fx"]{display:flex;flex-direction:column;min-height:0;overflow:hidden}
   html body [data-card="fx"] .card-body{flex:1 1 0;min-height:0;display:flex;flex-direction:column}
   html body [data-card="fx"] .pairs-scroll{flex:1 1 0;height:0;min-height:0;max-height:none;overflow-y:auto;border-bottom:0}
-  @media (max-width:1180px){html body [data-card="fx"] .pairs-scroll{flex:none;height:auto;max-height:480px}}
+  @media (max-width:1180px){html body [data-card="fx"] .card-body{flex:none}html body [data-card="fx"] .pairs-scroll{flex:none;height:auto;max-height:480px}}
   .fx-block{padding:16px 20px;display:flex;flex-direction:column;gap:12px}
   .fx-block.is-closed{padding-top:8px;padding-bottom:8px}
   .fx-block + .fx-block{border-top:1px solid var(--divider)}
@@ -1478,9 +1478,14 @@
   .acct-card-chip{gap:2px}
   .fx-block{padding:12px 16px;gap:8px}
   .fx-box{padding:8px 12px;gap:0}
-  .fx-box .fx-big{font-size:20px}
+  .fx-box .fx-big{font-size:18px}
   .fx-boxes{gap:12px}
   [data-card="fx"] .card-head-right .fx-meta{flex-direction:row;align-items:center;gap:8px}
+  /* Alias y moneda de la cuenta, más juntos */
+  .acct-card-name{gap:0}
+  .acct-alias-row{line-height:1.2}
+  .acct-alias-row .acct-go{width:24px;height:24px;margin:-4px 0}
+  .acct-card-name > .muted{line-height:1.2;margin-top:-2px}
 </style>
 
 <div class="app">

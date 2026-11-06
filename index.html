@@ -2043,7 +2043,7 @@
     if (!state.editing) document.getElementById('balances').innerHTML = ACCOUNTS.map(a => {
       const short = shortOf(a), n = dueOf(a.cur).length;
       const first = short ? needs(a.cur)[0] : null;
-      const chip = !n ? '' : !short && shortOf(a, true) ? pendChip(a.cur) : short ? `<span class="chip chip-warn">Saldo insuficiente</span><span class="muted" title="${first ? 'Desde el ' + dateOf(first.day) : ''}">Faltan ${amtOf(a.cur, short)}</span>` : '';
+      const chip = !n ? '' : !short && shortOf(a, true) ? pendChip(a.cur) : short ? `<span class="chip chip-warn">Saldo insuficiente</span>` : '';
       const live = mktState().live;
       const qa = (icon, label, attr, cls = '', sub = '') => `<button class="qa${cls}" ${attr}><span class="qa-ic" aria-hidden="true"><i class="ti ${icon}"></i></span><span class="qa-l">${label}</span>${sub ? `<span class="qa-sub">${sub}</span>` : ''}</button>`;
       const buyLabel = short ? 'Comprar ' + amtOf(a.cur, short) : 'Comprar';
